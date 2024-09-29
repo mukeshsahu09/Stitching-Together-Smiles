@@ -7,27 +7,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-    />
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
     <script
       src="https://kit.fontawesome.com/a351c5997c.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Stitching Together Smiles</title>
-    <link rel="stylesheet" href="/MukeshsPortfolio/Projects/Cloth Donation Site/style.css" />
+      crossorigin="anonymous"></script>
+    <title>Stitching Together Smiles | Cloth Donation Website</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,300"
       rel="stylesheet"
-      type="text/css"
-    />
+      type="text/css" />
     <link
       rel="stylesheet"
-      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <div id="header" class="">
+    <div id="header" class="header">
       <div class="navbar">
         <h2 class="logo">Stitching Together Smiles</h2>
       </div>
@@ -47,14 +42,14 @@
           Amount <br /><i class="fa-sharp fa-solid fa-indian-rupee-sign"> </i>
           499/-
         </div>
-        <input type="Text" name="Name" placeholder="Name on Card" />
-        <input type="number" name="card number" placeholder="Card number" />
-        <!-- Write a expiry date in title -->
-        <input type="date" name="date" placeholder="Expiry Date" />
-        <input type="password" name="password" placeholder="x x x x" />
-        <input type="number" name="zip code" placeholder="Zip Code" />
-
-        <button class="btn"><a href="#">Pay</a></button>
+        <form action="payment_gateway_url" method="post">
+          <input type="text" name="name" placeholder="Name on Card" required />
+          <input type="text" name="card_number" placeholder="Card Number" required />
+          <input type="month" name="expiry_date" placeholder="Expiry Date" required />
+          <input type="password" name="cvv" placeholder="CVV" required />
+          <input type="text" name="zip_code" placeholder="Zip Code" required />
+          <button class="btn" type="submit">Pay</button>
+        </form>
       </div>
       <a href="register.html" class="mybtn" target="_blank">JOIN US</a>
 
@@ -77,13 +72,16 @@
             <div class="project-col-2">
               <h1 class="sub-title2">About Us</h1>
               <p>
-                Welcome to our cloth donation website, where we aim to make a difference in the lives of those in need. With a simple click on the "Join Us" button, you can become a part of our compassionate community.
+                Welcome to our cloth donation website, where we aim to make a
+                difference in the lives of those in need. With a simple click on
+                the "Join Us" button, you can become a part of our compassionate
+                community.
               </p>
               <div class="social-icons">
                 <ul>
                   <li>
                     <a href="#">
-                      <i class="fab fa-facebook-f icon"></i>    </a>
+                      <i class="fab fa-facebook-f icon"></i> </a>
                   </li>
                   <li>
                     <a href="#"><i class="fab fa-twitter icon"></i></a>
@@ -91,7 +89,8 @@
                   <li>
                     <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
                   <li>
-                    <a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+                    <a href="#"><i
+                        class="fab fa-google-plus-g icon"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -99,9 +98,9 @@
         </div>
       </div>
     </div>
- 
-    
-
+    <div class="copyright">
+      <p>All rights reserved ©2023</p>
+    </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
 </html>
